@@ -148,7 +148,7 @@ const doLogin = async function (req, res) {
 
             let payload = { _id: user._id }
 
-            let token = jwt.sign(payload, 'projectfourth', { expiresIn: '24h' })
+            let token = jwt.sign(payload, 'projectfourth', { expiresIn: '1800s' })
 
             res.header('x-api-key', token);
 
